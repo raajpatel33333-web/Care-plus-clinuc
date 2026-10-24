@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics & Reports | CarePlus Clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-header">
+        <a class="logo" href="index.html">❤ CarePlus Clinic</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="feedback.html">Feedback Form</a>
+            <a href="admin.html">Admin Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="section">
+        <h2>Analytics & Reports</h2>
+        <p>Understand patient satisfaction across clinic services.</p>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Total Responses</h3>
+                <p id="reportTotal">0</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Overall Rating</h3>
+                <p id="reportAverage">0 / 5</p>
+            </div>
+        </div>
+
+        <section class="card">
+            <h2>Service-wise Performance</h2>
+            <p id="reportEmpty">Loading report...</p>
+
+            <div style="overflow-x:auto;">
+                <table style="width:100%; border-collapse:collapse; background:white;">
+                    <thead>
+                        <tr>
+                            <th style="padding:12px;">Department</th>
+                            <th style="padding:12px;">Responses</th>
+                            <th style="padding:12px;">Average Rating</th>
+                            <th style="padding:12px;">Performance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <button class="primary-button" onclick="window.print()">
+            Print / Save Report
+        </button>
+
+        <p>
+            <a href="admin.html">← Back to Admin Dashboard</a>
+        </p>
+    </main>
+
+    <footer>
+        <p>© 2026 CarePlus Clinic Feedback Portal</p>
+    </footer>
+
+    <script src="reports.js"></script>
+</body>
+
+</html>
