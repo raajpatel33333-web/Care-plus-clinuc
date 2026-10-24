@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Feedback | CarePlus Clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-header">
+        <a class="logo" href="index.html">❤ CarePlus Clinic</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Our Services</a>
+            <a href="index.html#about">About Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section feedback-section">
+            <h2>Patient Feedback Form</h2>
+            <p class="section-intro">
+                Your feedback helps us improve our clinic services.
+            </p>
+
+            <form id="feedbackForm" class="feedback-form">
+
+                <h3>1. Patient Information</h3>
+
+                <label for="patientName">Patient Name (Optional)</label>
+                <input type="text" id="patientName" placeholder="Enter your name">
+
+                <label for="anonymous">Anonymous Feedback?</label>
+                <select id="anonymous" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label for="visitDate">Visit Date</label>
+                <input type="date" id="visitDate" required>
+
+                <label for="appointmentId">
+                    Visit / Appointment ID (Optional)
+                </label>
+                <input type="text" id="appointmentId" placeholder="Enter appointment ID">
+
+                <h3>2. Service Information</h3>
+
+                <label for="department">Select Service</label>
+                <select id="department" required>
+                    <option value="">Choose a service</option>
+                    <option value="Doctor Consultation">Doctor Consultation</option>
+                    <option value="Nursing">Nursing</option>
+                    <option value="Reception">Reception</option>
+                    <option value="Cleanliness">Cleanliness</option>
+                    <option value="Waiting Time">Waiting Time</option>
+                    <option value="Billing">Billing</option>
+                </select>
+
+                <label for="rating">Overall Rating</label>
+                <select id="rating" required>
+                    <option value="">Choose your rating</option>
+                    <option value="5">★★★★★ - Excellent</option>
+                    <option value="4">★★★★ - Very Good</option>
+                    <option value="3">★★★ - Good</option>
+                    <option value="2">★★ - Fair</option>
+                    <option value="1">★ - Poor</option>
+                </select>
+
+                <label for="comments">Comments / Suggestions</label>
+                <textarea id="comments" rows="5" required placeholder="Share your experience..."></textarea>
+
+                <button type="submit" class="primary-button">
+                    Submit Feedback
+                </button>
+
+                <p id="message" role="status"></p>
+                <p id="feedbackId"></p>
+
+                <a href="index.html" class="secondary-button">
+                    ← Back to Home
+                </a>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 CarePlus Clinic Feedback Portal</p>
+        <p>Thank you for sharing your experience!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
