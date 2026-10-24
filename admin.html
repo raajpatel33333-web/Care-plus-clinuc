@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | CarePlus Clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-header">
+        <a class="logo" href="index.html">❤ CarePlus Clinic</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="feedback.html">Feedback Form</a>
+        </nav>
+    </header>
+
+    <main class="section">
+        <h2>Admin Dashboard</h2>
+        <p>Review patient feedback and manage service quality.</p>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Total Feedback</h3>
+                <p id="totalFeedback">0</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Average Rating</h3>
+                <p id="averageRating">0 / 5</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Pending Complaints</h3>
+                <p id="pendingFeedback">0</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Resolved Feedback</h3>
+                <p id="resolvedFeedback">0</p>
+            </div>
+        </div>
+
+        <h2>Feedback Records</h2>
+
+        <div style="overflow-x:auto;">
+            <table id="feedbackTable" style="width:100%; border-collapse:collapse; background:white;">
+                <thead>
+                    <tr>
+                        <th style="padding:10px;">Feedback ID</th>
+                        <th style="padding:10px;">Patient</th>
+                        <th style="padding:10px;">Service</th>
+                        <th style="padding:10px;">Rating</th>
+                        <th style="padding:10px;">Comments</th>
+                        <th style="padding:10px;">Status</th>
+                        <th style="padding:10px;">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="feedbackTableBody"></tbody>
+            </table>
+        </div>
+
+        <p id="adminMessage"></p>
+
+        <a href="reports.html" class="primary-button">View Analytics & Reports</a>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
